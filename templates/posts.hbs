@@ -1,6 +1,7 @@
 <h1>Dracula's blog</h1>
+
 <ul>
-	<li><a href="#">I love Blood!</a></li>
-	<li><a href="#">the count</a></li>
-	<li><a href="#">Dracula!</a></li>
+  {{#each post in model}}
+    <li>{{#link-to 'post' post}}{{post.title}}{{/link-to}}</li>
+  {{/each}}
 </ul>
