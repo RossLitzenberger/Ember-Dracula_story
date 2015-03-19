@@ -1,5 +1,5 @@
 Blogger.PostsRoute = Ember.Route.extend({
-	model: function(){
-		return posts;
-	}
+  model: function() {
+    return this.store.find('post');
+  }
 });

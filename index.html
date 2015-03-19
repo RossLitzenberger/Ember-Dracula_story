@@ -3,30 +3,38 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Blogger</title>
+		<!-- Style Sheets -->
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/style.css">
 		
+		<!-- Libs -->
 		<script src="libs/jquery-1.11.2.js"></script>
 		<script src="libs/handlebars-v3.0.0.js"></script>
 		<script src="libs/ember.js"></script>
 		<script src="libs/ember-handlebars-loader-0.0.2.js"></script>
 		<script src="libs/ember-template-compiler-1.10.0.js"></script>
+		<script src="libs/ember-data.js"></script>
+		<script src="libs/localstorage-adapter-0.5.1.js"></script>
 		
 		<!-- Stander files -->
 		<script src="blogger.js"></script>
 		<script src="router.js"></script>
 		<script src="store.js"></script>
 		
+		<!-- Routes -->
+		<script src="routes/posts.js"></script>
+		<script src="routes/post.js"></script>
+		<script src="routes/recent-comments.js"></script>
+		
+		<!-- Model -->
+		<script src="models/post.js"></script>
+		<script src="models/comment.js"></script>
+
 		<!-- Contoller -->
 		<script src="controllers/about.js"></script>
 		<script src="controllers/contact.js"></script>
 		<script src="controllers/post.js"></script>
 		<script src="controllers/posts.js"></script>
-		
-		<!-- Routes -->
-		<script src="routes/posts.js"></script>
-		<script src="routes/post.js"></script>
-		<script src="routes/recent-comments.js"></script>
 		
 		<!-- hbs files name add here, to display them on page -->
 		<script>
