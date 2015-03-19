@@ -1,7 +1,7 @@
 <h1>Dracula's blog</h1>
 
 <ul>
-  {{#each post in model}}
-    <li>{{#link-to 'post' post}}{{post.title}}{{/link-to}}</li>
+  {{#each}}
+    <li>{{title}}</li>
   {{/each}}
 </ul>
