@@ -1,16 +1,14 @@
-Blogger.NewCommentControoler = Ember.Controller.extend({
-	needs: ['post'],
-	actions: {
-		save: function(){
-			var comment = this.store.createRecord('comment', {
-				text: this.get('text')
-			});
-			comment.save();
+Blogger.NewCommentController = Ember.ObjectController.extend({
+  actions: {
+    save: function() {
+      var comment = this.get('model');
+      comment.save();
 
-			var post = this.get('controller.post.model');
-			post.get('comments').pushObject(comment);
-			post.save();
-			this.transitionToRoute('post', post.id);
-		}
-	}
+      var controller = this;
+      comment.get('post').then(function(post) {
+        post.save();
+        controller.transitionToRoute('post', post);
+      });
+    }
+  }
 });
